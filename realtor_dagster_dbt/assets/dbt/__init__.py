@@ -31,7 +31,6 @@ class CustomDagsterDbtTranslator(DagsterDbtTranslator):
 @dbt_assets(
     manifest=dbt_manifest_path,
     dagster_dbt_translator=CustomDagsterDbtTranslator(),
-
 )
 
 def dbt_project_assets(context: AssetExecutionContext, dbt: DbtCliResource):

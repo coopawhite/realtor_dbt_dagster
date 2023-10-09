@@ -1,0 +1,6 @@
+[32m2023-10-09 15:58:15 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 3e8a33b7-936d-47a0-80bc-9d4b78118a8a - 29610 - LOGS_CAPTURED - Started capturing logs in process (pid: 29610).
+[32m2023-10-09 15:58:15 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 3e8a33b7-936d-47a0-80bc-9d4b78118a8a - 29610 - call_property_list_api - STEP_START - Started execution of step "call_property_list_api".
+[32m2023-10-09 15:58:17 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 3e8a33b7-936d-47a0-80bc-9d4b78118a8a - 29610 - call_property_list_api - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
+[32m2023-10-09 15:58:18 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 3e8a33b7-936d-47a0-80bc-9d4b78118a8a - 29610 - call_property_list_api - ASSET_MATERIALIZATION - Materialized value duckdb raw call_property_list_api.
+[32m2023-10-09 15:58:18 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 3e8a33b7-936d-47a0-80bc-9d4b78118a8a - 29610 - call_property_list_api - HANDLED_OUTPUT - Handled output "result" using IO manager "database_io_manager"
+[32m2023-10-09 15:58:18 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 3e8a33b7-936d-47a0-80bc-9d4b78118a8a - 29610 - call_property_list_api - STEP_SUCCESS - Finished execution of step "call_property_list_api" in 2.74s.

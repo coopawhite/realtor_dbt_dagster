@@ -13,7 +13,7 @@ from .assets.dbt import (
 )
 
 
-database_io_manager = DuckDBPandasIOManager(database="analytics", schema="raw")
+database_io_manager = DuckDBPandasIOManager(database="analytics")
 
 resources = {
     "database_io_manager": database_io_manager,
@@ -23,6 +23,7 @@ resources = {
 
 realtor_api_assets = load_assets_from_package_module(
     realtor_api,
+    key_prefix=["duckdb", "raw"]
 )
 
 
