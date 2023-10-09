@@ -1,5 +1,7 @@
 import requests
 import pandas as pd
+from dotenv import load_dotenv
+import os
 
 from dagster import (
     asset, 
@@ -7,6 +9,9 @@ from dagster import (
     MetadataValue,
 )
 
+load_dotenv()
+RAPID_API_KEY = os.getenv('RAPID_API_KEY')
+RAPID_API_HOST = os.getenv('RAPID_API_HOST')
 
 @asset(
         io_manager_key="database_io_manager"
@@ -32,8 +37,8 @@ def call_property_list_api(
     }
     headers = {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "c330c4c649mshc1af4c3b4deec68p1afe62jsn4d6018d32514",
-        "X-RapidAPI-Host": "realtor.p.rapidapi.com"
+        "X-RapidAPI-Key": RAPID_API_KEY,
+        "X-RapidAPI-Host": RAPID_API_HOST
     }
 
     response = requests.post(url, json=payload, headers=headers)
