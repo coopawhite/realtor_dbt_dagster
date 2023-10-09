@@ -1,0 +1,6 @@
+dbt_realtor:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '..//analytics.realtor'
