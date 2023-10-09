@@ -1,6 +1,0 @@
-[32m2023-10-09 14:13:52 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ffd44a40-ff6b-4dd9-a286-f85fdb110114 - 84041 - LOGS_CAPTURED - Started capturing logs in process (pid: 84041).
-[32m2023-10-09 14:13:52 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ffd44a40-ff6b-4dd9-a286-f85fdb110114 - 84041 - call_property_list_api - STEP_START - Started execution of step "call_property_list_api".
-[32m2023-10-09 14:14:00 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ffd44a40-ff6b-4dd9-a286-f85fdb110114 - 84041 - call_property_list_api - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
-[32m2023-10-09 14:14:00 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ffd44a40-ff6b-4dd9-a286-f85fdb110114 - 84041 - call_property_list_api - ASSET_MATERIALIZATION - Materialized value call_property_list_api.
-[32m2023-10-09 14:14:00 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ffd44a40-ff6b-4dd9-a286-f85fdb110114 - 84041 - call_property_list_api - HANDLED_OUTPUT - Handled output "result" using IO manager "database_io_manager"
-[32m2023-10-09 14:14:00 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ffd44a40-ff6b-4dd9-a286-f85fdb110114 - 84041 - call_property_list_api - STEP_SUCCESS - Finished execution of step "call_property_list_api" in 8.0s.

@@ -3,4 +3,4 @@ dbt_realtor:
   outputs:
     dev:
       type: duckdb
-      path: '..//analytics.realtor'
+      path: '..//analytics'

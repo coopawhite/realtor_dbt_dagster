@@ -1,4 +1,10 @@
-WITH UnnestedBranding AS (
+WITH raw_property_list AS (
+    SELECT
+        *
+    FROM {{ source('raw', 'call_property_list_api') }}
+),
+
+UnnestedBranding AS (
     SELECT
         property_id,
         listing_id,
@@ -6,7 +12,7 @@ WITH UnnestedBranding AS (
         b['name'] AS name,
         b['phone'] AS phone,
         b['link'] AS link,
-    FROM raw.call_property_list_api,
+    FROM {{ source('raw', 'call_property_list_api') }},
     LATERAL UNNEST(branding) AS t(b)
 ),
 
@@ -17,7 +23,7 @@ UnnestedOpenHouses AS (
         oh['start_date'] AS open_house_start_time,
         oh['description'] AS open_house_description,
         oh['time_zone'] AS open_house_time_zone,
-    FROM raw.call_property_list_api,
+    FROM {{ source('raw', 'call_property_list_api') }},
     LATERAL UNNEST(open_houses) AS t(oh)
 ),
 
@@ -26,7 +32,7 @@ VirtualTours AS (
         property_id,
         listing_id,
         vt['href'] as virtual_tour_link
-    FROM raw.call_property_list_api,
+    FROM {{ source('raw', 'call_property_list_api') }},
     LATERAL UNNEST(virtual_tours) as t(vt)
 ),
 
@@ -40,7 +46,7 @@ Advertisers AS (
         ad.href as advertiser_href,
         ad.slogan as advertiser_slogan,
         ad.type as advertiser_type
-    FROM raw.call_property_list_api,
+    FROM {{ source('raw', 'call_property_list_api') }},
     LATERAL UNNEST(advertisers) as t(ad)
 ),
 
@@ -58,7 +64,7 @@ Source AS (
         source['plan_id'] as source_plan_id,
         source['listing_href'] as source_listing_href,
         source['listing_id'] as source_listing_id
-    FROM raw.call_property_list_api,
+    FROM {{ source('raw', 'call_property_list_api') }},
     LATERAL UNNEST(source['agents']) as t(ag)
 )
 
@@ -147,7 +153,7 @@ SELECT
     a.list_date,
     a.products['brand_name'] as product_brand_name,
     a.last_sold_price
-FROM raw.call_property_list_api a
+FROM raw_property_list a
 LEFT JOIN UnnestedOpenHouses uoh ON 
     uoh.property_id = a.property_id AND uoh.listing_id = a.listing_id
 LEFT JOIN UnnestedBranding ub ON

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: analytics
+    schema: raw
+    tables: 
+      - name: call_property_list_api
