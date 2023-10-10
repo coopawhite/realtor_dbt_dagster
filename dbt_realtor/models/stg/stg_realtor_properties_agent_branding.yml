@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: stg_realtor_properties_agent_branding
+    columns:
+      - name: property_listing_key 
+        description: The surrogate key of the listing
+        tests:
+          - not_null
+          - unique
+
+      - name: property_id 
+        tests:
+          - not_null
+
+      - name: listing_id 
+        tests:
+          - not_null
+          - unique
+
+      - name: photo
+        description: placeholder
+
+      - name: name
+        description: placeholder
+
+      - name: phone
+        description: placeholder
+
+      - name: link
+        description: placeholder
+
+      - name: advertiser_fulfillment_id
+        description: placeholder
+
+      - name: advertiser_name
+        description: placeholder
+
+      - name: advertiser_email
+        description: placeholder
+
+      - name: advertiser_href
+        description: placeholder
+
+      - name: advertiser_slogan
+        description: placeholder
+
+      - name: advertiser_type
+        description: placeholder
+
+      - name: source_agent_id
+        description: placeholder
+
+      - name: source_agent_name
+        description: placeholder
+
+      - name: source_office_id
+        description: placeholder
+
+      - name: source_office_name
+        description: placeholder
+
+      - name: source_id
+        description: placeholder
+
+      - name: source_type
+        description: placeholder
+
+      - name: source_spec_id
+        description: placeholder
+
+      - name: source_plan_id
+        description: placeholder
+
+      - name: source_listing_href
+        description: placeholder
+
+      - name: source_listing_id
+        description: placeholder

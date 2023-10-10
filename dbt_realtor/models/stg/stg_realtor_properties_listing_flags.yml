@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_realtor_properties_listing_flags
+    columns:
+      - name: property_listing_key 
+        description: The surrogate key of the listing
+        tests:
+          - not_null
+          - unique
+
+      - name: property_id 
+        tests:
+          - not_null
+
+      - name: listing_id 
+        tests:
+          - not_null
+          - unique
+
+      - name: is_price_reduced
+        description: placeholder
+
+      - name: is_new_construction
+        description: placeholder
+
+      - name: is_foreclosure
+        description: placeholder
+
+      - name: is_plan
+        description: placeholder
+
+      - name: is_new_listing
+        description: placeholder
+
+      - name: is_coming_soon
+        description: placeholder
+
+      - name: is_contingent
+        description: placeholder
+
+      - name: is_pending
+        description: placeholder
+
+      - name: cats_allowed
+        description: placeholder
+
+      - name: dogs_allowed
+        description: placeholder

@@ -16,7 +16,7 @@ RAPID_API_HOST = os.getenv('RAPID_API_HOST')
 @asset(
         io_manager_key="database_io_manager"
 )
-def call_property_list_api(
+def realtor_properties_list(
     context: AssetExecutionContext
 ) -> pd.DataFrame:
     """

@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_realtor_properties_address
+    columns:
+      - name: property_listing_key 
+        description: The surrogate key of the listing
+        tests:
+          - not_null
+          - unique
+
+      - name: property_id 
+        tests:
+          - not_null
+
+      - name: listing_id 
+        tests:
+          - not_null
+          - unique
+
+      - name: city
+        description: placeholder
+        
+      - name: line
+        description: placeholder
+        
+      - name: street_name
+        description: placeholder
+        
+      - name: street_number
+        description: placeholder
+        
+      - name: street_suffix
+        description: placeholder
+        
+      - name: country
+        description: placeholder
+        
+      - name: postal_code
+        description: placeholder
+        
+      - name: state_code
+        description: placeholder
+        
+      - name: state
+        description: placeholder
+        
+      - name: lat
+        description: placeholder
+        
+      - name: lon
+        description: placeholder
+        
+      - name: accuracy
+        description: placeholder
+        
+      - name: street_view_url
+        description: placeholder
+        
+      - name: fips_code
+        description: placeholder
+        

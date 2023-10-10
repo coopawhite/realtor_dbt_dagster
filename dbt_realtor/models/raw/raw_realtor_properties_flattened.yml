@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: raw_realtor_properties_flattened
+    columns:
+
+      - name: property_id 
+        tests:
+          - not_null
+
+      - name: listing_id 
+        tests:
+          - not_null
+
+      - name: city
+        tests:
+          - not_null
+
+      - name: street_name
+        tests:
+          - not_null
+      
+      - name: country
+        tests:
+          - not_null
+      
+      - name: list_price
+        tests:
+          - not_null
+      

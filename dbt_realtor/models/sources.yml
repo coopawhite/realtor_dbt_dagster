@@ -5,4 +5,4 @@ sources:
     database: analytics
     schema: raw
     tables: 
-      - name: call_property_list_api
+      - name: realtor_properties_list

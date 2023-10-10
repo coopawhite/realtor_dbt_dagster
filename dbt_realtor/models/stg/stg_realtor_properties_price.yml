@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_realtor_properties_price
+    columns:
+      - name: property_listing_key 
+        description: The surrogate key of the listing
+        tests:
+          - not_null
+          - unique
+
+      - name: property_id 
+        tests:
+          - not_null
+
+      - name: listing_id 
+        tests:
+          - not_null
+          - unique
+
+      - name: list_price
+        description: placeholder
+        tests:
+          - not_null
+
+      - name: list_price_min
+        description: placeholder
+
+
+      - name: list_price_max
+        description: placeholder
+
+
+      - name: price_reduced_amount
+        description: placeholder
+
+
+      - name: estimate
+        description: placeholder
+
+
+      - name: last_sold_date
+        description: placeholder
+
+      - name: list_date
+        description: placeholder
+        tests:
+          - not_null
+
+      - name: last_sold_price
+        description: placeholder

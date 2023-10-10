@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_realtor_properties_open_house
+    columns:
+      - name: property_listing_key 
+        description: The surrogate key of the listing
+        tests:
+          - not_null
+          - unique
+
+      - name: property_id 
+        tests:
+          - not_null
+
+      - name: listing_id 
+        tests:
+          - not_null
+          - unique
+
+      - name: open_house_start_time
+        description: placeholder
+        tests:
+          - not_null
+
+      - name: open_house_description
+        description: placeholder
+      
+      - name: open_house_time_zone
+        description: placeholder

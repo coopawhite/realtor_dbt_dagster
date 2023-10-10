@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_realtor_properties
+    columns:
+      - name: property_listing_key 
+        description: The surrogate key of the listing
+        tests:
+          - not_null
+          - unique
+
+      - name: property_id 
+        tests:
+          - not_null
+
+      - name: listing_id 
+        tests:
+          - not_null
+          - unique
+
+      - name: city
+        tests:
+          - not_null
+
+      - name: street_name
+        tests:
+          - not_null
+      
+      - name: country
+        tests:
+          - not_null
+      
+      - name: list_price
+        tests:
+          - not_null
+      

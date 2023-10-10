@@ -33,5 +33,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_realtor:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    raw:
+      +materialized: table
+
+    stg:
       +materialized: view
+
+    fct:
+      +materialized: table
+
+    dim:
+      +materialized: table
